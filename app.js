@@ -25,6 +25,8 @@ app.directive('uniqueEmailAddress', function() {
 
 app.controller('authController', ['$scope','$window','$timeout','$location', function($scope,$window,$timeout,$location) {
 
+	$("#auth-box").show();
+
 	// existing data
 	var usersData = [{
 			firstname: 'Admin',

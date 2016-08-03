@@ -31,20 +31,33 @@
       * {
         font-family: 'Didact Gothic', sans-serif;
       }
-      .auth-box {
+      #auth-box {
         width:300px;
         margin: 0;
         position: absolute;
         top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-      } 
+      }
+      #loading {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }  
+
+      [ng-cloak]
+      {
+        display: none !important;
+      }
     </style>
   </head>
   <body ng-app="app">
 
   <div class="container">
-  <div class="auth-box">
+  <!-- <div id="loading">loading...</div> -->
+  <div id="auth-box" style="display:none;">
    <div  ng-controller="authController">
 
       <div class="text-center">
