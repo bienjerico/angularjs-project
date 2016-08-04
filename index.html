@@ -47,17 +47,16 @@
         transform: translate(-50%, -50%);
       }  
 
-      [ng-cloak]
-      {
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
         display: none !important;
       }
     </style>
   </head>
-  <body ng-app="app">
+  <body ng-app="app" ng-cloak>
 
   <div class="container">
   <!-- <div id="loading">loading...</div> -->
-  <div id="auth-box" style="display:none;">
+  <div id="auth-box">
    <div  ng-controller="authController">
 
       <div class="text-center">
