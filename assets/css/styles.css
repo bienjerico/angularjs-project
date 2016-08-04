@@ -9,7 +9,7 @@ body {
 
 body {
   align-items: center;
-  background: linear-gradient( 135deg, #136a8a, #267871);
+  background: linear-gradient( 45deg, #136a8a, #ffffff);
   color: #666666;
   display: flex;
   padding: 20px;
@@ -21,13 +21,18 @@ body {
   width:300px;
   margin: 0;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #f1f1f1;
   padding: 0px 15px 0px 15px;
   border-radius: 10px;
   box-shadow: 0 10px 15px #0d4c63;
+}
+
+.sample-credentials {
+  font-size:12px;
+  padding-bottom:5px;
 }
 
 

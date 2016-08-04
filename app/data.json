@@ -1,0 +1,74 @@
+[
+	{
+		"firstname": "User",
+		"lastname": "Admin",
+		"emailaddress": "user@admin.com",	
+		"password": "secret",
+		"address" : "",
+		"aboutme" : "",
+		"mobile" : "",
+		"gender" : "",
+		"birthdate" : "",
+		"age" : ""
+	},
+		{
+		"firstname": "User1",
+		"lastname": "Admin1",
+		"emailaddress": "user1@admin.com",	
+		"password": "secret",
+		"address" : "",
+		"aboutme" : "",
+		"mobile" : "",
+		"gender" : "",
+		"birthdate" : "",
+		"age" : ""
+	},
+		{
+		"firstname": "User2",
+		"lastname": "Admin2",
+		"emailaddress": "user2@admin.com",	
+		"password": "secret",
+		"address" : "",
+		"aboutme" : "",
+		"mobile" : "",
+		"gender" : "",
+		"birthdate" : "",
+		"age" : ""
+	},
+		{
+		"firstname": "User3",
+		"lastname": "Admin3",
+		"emailaddress": "user3@admin.com",	
+		"password": "secret",
+		"address" : "",
+		"aboutme" : "",
+		"mobile" : "",
+		"gender" : "",
+		"birthdate" : "",
+		"age" : ""
+	},
+		{
+		"firstname": "User4",
+		"lastname": "Admin4",
+		"emailaddress": "user4@admin.com",	
+		"password": "secret",
+		"address" : "",
+		"aboutme" : "",
+		"mobile" : "",
+		"gender" : "",
+		"birthdate" : "",
+		"age" : ""
+	},
+		{
+		"firstname": "User5",
+		"lastname": "Admin5",
+		"emailaddress": "user5@admin.com",	
+		"password": "secret",
+		"address" : "",
+		"aboutme" : "",
+		"mobile" : "",
+		"gender" : "",
+		"birthdate" : "",
+		"age" : ""
+	}
+]

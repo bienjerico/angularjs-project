@@ -1,59 +1,15 @@
-var app = angular.module('app', []);
+var auth = angular.module('auth', []);
 
-
-app.directive('uniqueEmailAddress', function() {
-	return {
-		restrict: 'AE',
-		require: 'ngModel',
-		link: function(scope, elem, attr, ctrl){
-			// watch the attribute every input email
-			scope.$watch(attr.ngModel, function(value) {
-				// loop all users data
-				for(var i=0;i<scope.users.length;i++) {
-					// check the email address is matched
-				    if(scope.users[i].emailaddress==value){
-				        ctrl.$setValidity('uniqueEmailAddress', false);
-				 	} else {
-				 		 ctrl.$setValidity('uniqueEmailAddress', true);
-				 	}
-				}
-			});
-	 	}
-	}
-});
-
-
-app.controller('authController', ['$scope','$window','$timeout','$location', function($scope,$window,$timeout,$location) {
-
-	// existing data
-	var usersData = [{
-			firstname: 'Admin',
-			lastname: 'User',
-			emailaddress: 'admin@user.com',
-			password: 'a'
-	}];
-
-	// notification message default
-	var messagesData = {
-			status : 'danger',
-			message : 'Something wrong.',
-			result : false
-	};
-
-	$scope.users 	= usersData;
-	$scope.msg 		= messagesData;
-
+auth.controller('authController', function($scope,$window,$timeout,$location) {
 
 	// submit sign up form
 	$scope.submitSignUpForm = function(isValid) {
 		// validate
 		if (isValid) {
 			$scope.users.push($scope.signup); // add to usersData
-			console.log($scope.users);
 			$scope.signup = '';	 // empty the signup fields
 			$scope.signupForm.$setPristine();  // reset the form validation
 			$scope.msg = {status : 'success', message: 'Successfully Saved.', result : true};// return message
-
 		}
 	};
 
@@ -80,11 +36,12 @@ app.controller('authController', ['$scope','$window','$timeout','$location', fun
 			// valid email address and password
 			if(validEmailAddress && validPassword) {
 				$scope.msg = {status : 'success', message: 'Successfully Signed In.', result : true};// return message
-				/*
+				$scope.signin = '';	 // empty the signup fields
+				$scope.signinForm.$setPristine(); // reset the form validation
 				$timeout(function(){
-					 $window.location.href = '/home.html';
-				}, 300);
-				*/
+					$location.path('/aboutme');
+				}, 500);
+				
 				
 			// valid email address and invalid password	
 			} else if (validEmailAddress && !validPassword) {
@@ -97,4 +54,4 @@ app.controller('authController', ['$scope','$window','$timeout','$location', fun
 	};
 
 
-}]);
+});

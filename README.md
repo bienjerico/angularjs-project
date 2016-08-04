@@ -1,6 +1,7 @@
 ## Angular JS Project
 Sign In and Sign Up Prototype 
  - Angular JS 
+ 	- Modular Directory Structure
  	- Validate Inputs: 
 	 	- Required Field
 	 	- Invalid Email Address
