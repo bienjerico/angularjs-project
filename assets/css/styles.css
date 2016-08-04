@@ -1,0 +1,41 @@
+* {
+  font-family:  'Didact Gothic', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient( 135deg, #136a8a, #267871);
+  color: #666666;
+  display: flex;
+  padding: 20px;
+}
+
+
+#auth-box {
+  background-color: #fff;
+  width:300px;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #f1f1f1;
+  padding: 0px 15px 0px 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px #0d4c63;
+}
+
+
+[ng\:cloak], 
+[ng-cloak], 
+[data-ng-cloak], 
+[x-ng-cloak], 
+.ng-cloak, 
+.x-ng-cloak {
+  display: none !important;
+}
