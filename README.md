@@ -5,5 +5,5 @@ Sign In and Sign Up Prototype
 	 	- Required Field
 	 	- Invalid Email Address
 	 	- Email adddress is already used. (using Directive and $watch)
- 	-ngRoute for Templating
+ 	- ngRoute for Templating
  - Bootstrap
