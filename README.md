@@ -1,6 +1,6 @@
 ## Angular JS Project
 Sign In and Sign Up Prototype 
- - Angular JS 
+ - AngularJS v1.5.8
  	- Modular Directory Structure
  	- Validate Inputs: 
 	 	- Required Field
