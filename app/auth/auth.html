@@ -1,59 +1,57 @@
-<div class="container">
-  <div id="auth-box">
-    <div class="text-center">
-      <h3>Sign In</h3>
-    </div>
-    <div class="text-center sample-credentials" >user@admin.com / secret </div>
-    <div class="alert alert-{{msg.status}} alert-dismissible" ng-show="msg.result" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      {{msg.message}}
-    </div>
-    <form name="signinForm" novalidate>
-        <div class="form-group"  ng-class="{'has-error' : signinForm.emailaddress.$dirty && signinForm.emailaddress.$error.required || signinForm.emailaddress.$error.email }">
-          <input type="email" ng-model="signin.emailaddress" class="form-control" name="emailaddress" ng-required="true" placeholder="Email Address" />
-          <p ng-show="signinForm.emailaddress.$dirty && signinForm.emailaddress.$error.required" class="help-block">Email address is required.</p>
-          <p ng-show="signinForm.emailaddress.$dirty && signinForm.emailaddress.$error.email" class="help-block">Invalid email address.</p>
-        </div>
-        <div class="form-group"  ng-class="{'has-error' : signinForm.password.$dirty && signinForm.password.$error.required }">
-          <input type="password" ng-model="signin.password"  class="form-control"  name="password" ng-required="true"  placeholder="Password"/>
-          <p ng-show="signinForm.password.$dirty && signinForm.password.$error.required" class="help-block">Password is required.</p>
-        </div>
-        <div class="form-group pull-right">
-            <button type="submit" class="btn btn-default btn-sm" ng-disabled = "signinForm.$invalid" ng-click="submitSignInForm(signinForm.$valid)">
-              <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
-              Submit
-            </button>
-        </div> 
-    </form>
-    <div class="clearfix">&nbsp;</div>
-    <div class="text-center">
-      <h3>Sign Up</h3>
-    </div>
-    <form name="signupForm" novalidate>
-        <div class="form-group" ng-class="{'has-error' : signupForm.firstname.$dirty && signupForm.firstname.$error.required }" >
-          <input type="text" ng-model="signup.firstname" class="form-control" name="firstname" ng-required="true" ng-trim="true"  placeholder="First Name"/>
-          <p ng-show="signupForm.firstname.$dirty && signupForm.firstname.$error.required" class="help-block">First name is required.</p>
-        </div>
-         <div class="form-group"  ng-class="{'has-error' : signupForm.lastname.$dirty && signupForm.lastname.$error.required }">
-          <input type="text" ng-model="signup.lastname" class="form-control" name="lastname"  ng-required="true" ng-trim="true"  placeholder="Last Name"/>
-          <p ng-show="signupForm.lastname.$dirty && signupForm.lastname.$error.required" class="help-block">Last name is required.</p>
-        </div>
-        <div class="form-group"  ng-class="{'has-error' : signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.required || signupForm.emailaddress.$error.email || signupForm.emailaddress.$error.uniqueEmailAddress }">
-          <input type="email" ng-model="signup.emailaddress" class="form-control" name="emailaddress" ng-required="true" unique-email-address  placeholder="Email Address"/>
-          <p ng-show="signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.required" class="help-block">Email address is required.</p>
-          <p ng-show="signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.email" class="help-block">Invalid email address.</p>
-          <p ng-show="signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.uniqueEmailAddress" class="help-block">Email Address is already used.</p>
-        </div>
-        <div class="form-group"  ng-class="{'has-error' : signupForm.password.$dirty && signupForm.password.$error.required }">
-          <input type="password" ng-model="signup.password"  class="form-control"  name="password" ng-required="true"  placeholder="Password"/>
-          <p ng-show="signupForm.password.$dirty && signupForm.password.$error.required" class="help-block">Password is required.</p>
-        </div>
-        <div class="form-group pull-right">
-            <button type="submit" class="btn btn-default btn-sm" ng-disabled = "signupForm.$invalid" ng-click="submitSignUpForm(signupForm.$valid)">
-              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-              Submit
-            </button>
-        </div> 
-    </form>
+<div class="auth">
+  <div class="text-center">
+    <h3>Sign In</h3>
   </div>
+  <div class="text-center sample-credentials" >user@admin.com / secret </div>
+  <div class="alert alert-{{msg.status}} alert-dismissible" ng-show="msg.result" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    {{msg.message}}
+  </div>
+  <form name="signinForm" novalidate>
+      <div class="form-group"  ng-class="{'has-error' : signinForm.emailaddress.$dirty && signinForm.emailaddress.$error.required || signinForm.emailaddress.$error.email }">
+        <input type="email" ng-model="signin.emailaddress" class="form-control" name="emailaddress" ng-required="true" placeholder="Email Address" />
+        <p ng-show="signinForm.emailaddress.$dirty && signinForm.emailaddress.$error.required" class="help-block">Email address is required.</p>
+        <p ng-show="signinForm.emailaddress.$dirty && signinForm.emailaddress.$error.email" class="help-block">Invalid email address.</p>
+      </div>
+      <div class="form-group"  ng-class="{'has-error' : signinForm.password.$dirty && signinForm.password.$error.required }">
+        <input type="password" ng-model="signin.password"  class="form-control"  name="password" ng-required="true"  placeholder="Password"/>
+        <p ng-show="signinForm.password.$dirty && signinForm.password.$error.required" class="help-block">Password is required.</p>
+      </div>
+      <div class="form-group pull-right">
+          <button type="submit" class="btn btn-default btn-sm" ng-disabled = "signinForm.$invalid" ng-click="submitSignInForm(signinForm.$valid)">
+            <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+            Submit
+          </button>
+      </div> 
+  </form>
+  <div class="clearfix">&nbsp;</div>
+  <div class="text-center">
+    <h3>Sign Up</h3>
+  </div>
+  <form name="signupForm" novalidate>
+      <div class="form-group" ng-class="{'has-error' : signupForm.firstname.$dirty && signupForm.firstname.$error.required }" >
+        <input type="text" ng-model="signup.firstname" class="form-control" name="firstname" ng-required="true" ng-trim="true"  placeholder="First Name"/>
+        <p ng-show="signupForm.firstname.$dirty && signupForm.firstname.$error.required" class="help-block">First name is required.</p>
+      </div>
+       <div class="form-group"  ng-class="{'has-error' : signupForm.lastname.$dirty && signupForm.lastname.$error.required }">
+        <input type="text" ng-model="signup.lastname" class="form-control" name="lastname"  ng-required="true" ng-trim="true"  placeholder="Last Name"/>
+        <p ng-show="signupForm.lastname.$dirty && signupForm.lastname.$error.required" class="help-block">Last name is required.</p>
+      </div>
+      <div class="form-group"  ng-class="{'has-error' : signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.required || signupForm.emailaddress.$error.email || signupForm.emailaddress.$error.uniqueEmailAddress }">
+        <input type="email" ng-model="signup.emailaddress" class="form-control" name="emailaddress" ng-required="true" unique-email-address  placeholder="Email Address"/>
+        <p ng-show="signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.required" class="help-block">Email address is required.</p>
+        <p ng-show="signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.email" class="help-block">Invalid email address.</p>
+        <p ng-show="signupForm.emailaddress.$dirty && signupForm.emailaddress.$error.uniqueEmailAddress" class="help-block">Email Address is already used.</p>
+      </div>
+      <div class="form-group"  ng-class="{'has-error' : signupForm.password.$dirty && signupForm.password.$error.required }">
+        <input type="password" ng-model="signup.password"  class="form-control"  name="password" ng-required="true"  placeholder="Password"/>
+        <p ng-show="signupForm.password.$dirty && signupForm.password.$error.required" class="help-block">Password is required.</p>
+      </div>
+      <div class="form-group pull-right">
+          <button type="submit" class="btn btn-default btn-sm" ng-disabled = "signupForm.$invalid" ng-click="submitSignUpForm(signupForm.$valid)">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            Submit
+          </button>
+      </div> 
+  </form>
 </div>

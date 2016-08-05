@@ -1,22 +1,19 @@
 * {
   font-family:  'Didact Gothic', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
   height: 100%;
-}
-
-body {
-  align-items: center;
-  background: linear-gradient( 45deg, #136a8a, #ffffff);
+  background: linear-gradient( 0deg, #FF8008, #FFC837) no-repeat center fixed;
   color: #666666;
-  display: flex;
-  padding: 20px;
 }
 
 
-#auth-box {
+.auth {
   background-color: #fff;
   width:300px;
   margin: 0;
@@ -24,12 +21,29 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #f1f1f1;
+  border: 1px solid #fff;
   padding: 0px 15px 0px 15px;
   border-radius: 10px;
-  box-shadow: 0 10px 15px #0d4c63;
+  box-shadow: 0 15px 25px #d86800;
 }
 
+.aboutme {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px #d86800;
+  padding-bottom: 20px;
+}
+
+.container-padding-top {
+  padding-top: 20px;
+}
+
+.dropdown-toggle-transparent {
+   padding-top: 15px; 
+   padding-left: 15px; 
+   background-color: transparent; 
+   border-color:transparent;
+}
 .sample-credentials {
   font-size:12px;
   padding-bottom:5px;
@@ -44,3 +58,11 @@ body {
 .x-ng-cloak {
   display: none !important;
 }
+
+/*.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+  font-weight: bold;
+  background-color: transparent;
+  border-bottom: 0px;
+  border-color: transparent;
+}*/
