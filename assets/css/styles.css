@@ -82,10 +82,25 @@ body {
   display: none !important;
 }
 
-/*.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  font-weight: bold;
-  background-color: transparent;
-  border-bottom: 0px;
-  border-color: transparent;
-}*/
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    width: 100%;
+    padding: 8px 0;
+    margin: 2px 0 0;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
