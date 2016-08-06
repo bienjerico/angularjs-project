@@ -34,14 +34,37 @@ body {
   padding-bottom: 20px;
 }
 
+.aboutme-avatar {
+  border:1px solid #e0e0e0;
+  border-radius: 50%;
+  padding:5px;
+  background-color: #f0f0f0
+}
+
+.aboutme-details {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.aboutme-email {
+  text-decoration: none;
+}
+
+.row-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .container-padding-top {
   padding-top: 20px;
 }
 
 .dropdown-toggle-transparent {
-   padding-top: 15px; 
-   padding-left: 15px; 
-   background-color: transparent; 
+   padding-top: 15px;
+   padding-left: 15px;
+   background-color: transparent;
    border-color:transparent;
 }
 .sample-credentials {
@@ -50,16 +73,16 @@ body {
 }
 
 
-[ng\:cloak], 
-[ng-cloak], 
-[data-ng-cloak], 
-[x-ng-cloak], 
-.ng-cloak, 
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
 .x-ng-cloak {
   display: none !important;
 }
 
-/*.navbar-default .navbar-collapse, 
+/*.navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   font-weight: bold;
   background-color: transparent;

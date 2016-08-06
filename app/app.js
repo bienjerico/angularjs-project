@@ -1,9 +1,11 @@
-var app = angular.module('app', 
+var app = angular.module('app',
   [
     'ngRoute',
     'auth',
     'main',
-    'aboutme'
+    'aboutme',
+    'people',
+    'menulist'
   ]
 );
 
@@ -16,6 +18,10 @@ app.config(function ($routeProvider, $locationProvider) {
       .when('/aboutme', {
         templateUrl: 'app/about/aboutme.html',
         controller: 'aboutmeController'
+      })
+      .when('/people', {
+        templateUrl: 'app/people/people.html',
+        controller: 'peopleController'
       })
       .otherwise({
         redirectTo: '/'

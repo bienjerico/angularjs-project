@@ -1,0 +1,42 @@
+<div class="container container-padding-top">
+	<div class="aboutme">
+		<menu-list></menu-list>
+    <div class="clearfix">&nbsp;</div>
+		<div class="row row-container">
+			<div class="col-md-12 text-center" >
+        <div class="col-md-5" >
+          <input type="text" placeholder="Search first Name..." class="form-control" ng-model="search.firstname"/>
+        </div>
+        <div class="col-md-5" >
+          <input type="text" placeholder="Search last name..." class="form-control" ng-model="search.lastname"/>
+        </div>
+        <div class="col-md-2">
+          <select ng-model="search.gender" class="form-control" ng-change="dropallPeople(search.gender);">
+              <option value="">All...</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+      <div class="col-md-12">
+        <div class="list-group">
+          <a href="#" class="list-group-item"  ng-repeat="people in peoples |
+            filter:{'firstname': search.firstname} |
+            filter:{'lastname': search.lastname} |
+            filter:{'gender': search.gender} : true">
+            <div class="row">
+              <div class="col-md-1 text-center">
+                <img src="assets/img/user_icon.png" width="50"  style="border:1px solid #e0e0e0; border-radius: 50%; background-color: #f0f0f0 ">
+              </div>
+              <div class="col-md-11">
+                <h4 class="list-group-item-heading">{{ people.firstname +" "+people.lastname }}</h4>
+                <p class="list-group-item-text">{{ people.gender +" | "+ people.emailaddress }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
