@@ -10,6 +10,10 @@ menulist.controller('menuController', function($scope) {
     {
       url: '#/people',
       title: 'People'
+    },
+    {
+      url: '#/',
+      title: 'Logout'
     }
   ];
   console.log($scope.menus);
